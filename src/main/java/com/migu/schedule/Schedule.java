@@ -101,6 +101,10 @@ public class Schedule {
 
 
     public int scheduleTask(int threshold) {
+        if(threshold < 0){
+            return ReturnCodeKeys.E002;
+        }
+
         if (tasks.isEmpty()) {
             return ReturnCodeKeys.E014;
         }
